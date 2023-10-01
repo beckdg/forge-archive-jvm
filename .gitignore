@@ -1,0 +1,37 @@
+# Gradle
+.gradle/
+build/
+gradle/wrapper/*.zip
+
+# Vendor cache (local only)
+vendor/
+
+# Python
+__pycache__/
+*.pyc
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.classpath
+*.project
+.settings/
+bin/
+out/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Runtime
+*.far
+*.jnl
+*.log
+*.tmp
+
+# JaCoCo / JMH
+*.exec
+
+# Fuzz artifacts
+crash-*

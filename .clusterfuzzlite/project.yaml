@@ -1,0 +1,28 @@
+language: jvm
+sanitizers:
+  - address
+architectures:
+  - x86_64
+fuzz_targets:
+  - ArchiveReaderFuzzer
+  - ManifestFuzzer
+  - MetadataFuzzer
+  - IndexFuzzer
+  - JournalFuzzer
+  - TransactionFuzzer
+  - SnapshotFuzzer
+  - ChunkTableFuzzer
+  - ConfigFuzzer
+  - RpcFuzzer
+  - PacketFuzzer
+  - CompressionFuzzer
+  - VirtualFsFuzzer
+  - RecoveryFuzzer
+  - PatchFuzzer
+  - DiffFuzzer
+  - ObjectStoreFuzzer
+  - StreamReaderFuzzer
+  - QueryParserFuzzer
+  - PluginManifestFuzzer
+  - MerkleFuzzer
+  - DeltaFuzzer
