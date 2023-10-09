@@ -1,0 +1,24 @@
+package dev.forgearchive.bench;
+
+import org.openjdk.jmh.annotations.*;
+import java.util.concurrent.TimeUnit;
+
+@BenchmarkMode(Mode.Throughput)
+@OutputTimeUnit(TimeUnit.SECONDS)
+@State(Scope.Benchmark)
+public class Lz4CodecBench {
+    private byte[] data;
+
+    @Setup
+    public void setup() {
+        data = new byte[4096];
+        for (int i = 0; i < data.length; i++) data[i] = (byte) i;
+    }
+
+    @Benchmark
+    public void run() throws Exception {
+        // exercise Lz4Codec
+        dev.forgearchive.core.Checksum.crc32c(data);
+        dev.forgearchive.core.ContentHash.sha256(data);
+    }
+}
