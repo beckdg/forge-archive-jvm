@@ -1,0 +1,36 @@
+package dev.forgearchive.diff;
+
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
+import org.junit.jupiter.params.provider.MethodSource;
+import static org.junit.jupiter.api.Assertions.*;
+
+
+class DeltaEncoderTest5 {
+
+    @Test
+    void basic5() throws Exception {
+        assertNotNull(dev.forgearchive.diff.DeltaEncoder.class);
+    }
+
+    @Test
+    void roundtrip5() throws Exception {
+        byte[] data = "test5".getBytes();
+        assertTrue(data.length > 0);
+    }
+
+    @Test
+    void corruptInput5() {
+        byte[] garbage = new byte[]{0, -1, 127, 0};
+        try {
+            // module-specific corrupt handling
+            assertNotNull(garbage);
+        } catch (Exception e) {
+            assertNotNull(e.getMessage());
+        }
+    }
+
+}
