@@ -1,0 +1,41 @@
+[versions]
+junit = "5.11.4"
+mockito = "5.15.2"
+jmh = "1.37"
+errorprone = "2.36.0"
+errorpronePlugin = "4.1.0"
+spotbugs = "4.8.6"
+spotbugsPlugin = "6.0.27"
+checkstyle = "10.21.2"
+jacoco = "0.8.12"
+picocli = "4.7.6"
+jazzer = "0.24.0"
+slf4j = "2.0.16"
+logback = "1.5.15"
+lz4 = "1.8.0"
+zstd = "1.5.6-6"
+commonsCompress = "1.27.1"
+
+[libraries]
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit" }
+junit-jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit" }
+junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit" }
+junit-jupiter-params = { module = "org.junit.jupiter:junit-jupiter-params", version.ref = "junit" }
+mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockito" }
+mockito-junit = { module = "org.mockito:mockito-junit-jupiter", version.ref = "mockito" }
+jmh-core = { module = "org.openjdk.jmh:jmh-core", version.ref = "jmh" }
+jmh-generator = { module = "org.openjdk.jmh:jmh-generator-annprocess", version.ref = "jmh" }
+errorprone-core = { module = "com.google.errorprone:error_prone_core", version.ref = "errorprone" }
+spotbugs-annotations = { module = "com.github.spotbugs:spotbugs-annotations", version.ref = "spotbugs" }
+picocli = { module = "info.picocli:picocli", version.ref = "picocli" }
+picocli-codegen = { module = "info.picocli:picocli-codegen", version.ref = "picocli" }
+jazzer-api = { module = "com.code-intelligence:jazzer-api", version.ref = "jazzer" }
+jazzer-junit = { module = "com.code-intelligence:jazzer-junit", version.ref = "jazzer" }
+slf4j-api = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }
+logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
+lz4-java = { module = "org.lz4:lz4-java", version.ref = "lz4" }
+zstd-jni = { module = "com.github.luben:zstd-jni", version.ref = "zstd" }
+commons-compress = { module = "org.apache.commons:commons-compress", version.ref = "commonsCompress" }
+
+[plugins]
+errorprone = { id = "net.ltgt.errorprone", version.ref = "errorpronePlugin" }
